@@ -9,7 +9,7 @@ class PagesController < ApplicationController
 
   def contest
     flash[:notice] = "Sorry, the contest has ended"
-    redirect_to '/welcome'
+    redirect_to welcome_path
   end
 
   def kitten
@@ -23,7 +23,7 @@ class PagesController < ApplicationController
       render :secrets
     else
       flash[:notice] = "Sorry, that isn't the magic word"
-      redirect_to '/welcome'
+      redirect_to welcome_path
     end
   end
 
